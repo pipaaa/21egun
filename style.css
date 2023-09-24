@@ -8,13 +8,14 @@ body {
 /* Estilos del aviso de cookies */
 #cookie-banner {
     position: fixed;
-    bottom: 0;
+    top: -100px;
     left: 0;
     width: 100%;
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 10px;
+    transition: top 0.5s;
 }
 
 #accept-cookies {
@@ -24,6 +25,10 @@ body {
     padding: 5px 10px;
     cursor: pointer;
     margin-top: 5px;
+}
+
+.show-cookie-banner {
+    top: 0;
 }
 
 /* Estilos de la página principal */
@@ -37,8 +42,8 @@ body {
 }
 
 #logo {
-    width: 200px; /* Ajusta el tamaño de la imagen según tus preferencias */
-    animation: fadeIn 2s ease-in-out; /* Agregamos la animación aquí */
+    width: 200px;
+    animation: fadeIn 2s ease-in-out;
 }
 
 #subpages {
@@ -65,30 +70,3 @@ body {
         transform: scale(1);
     }
 }
-/* Estilos del aviso de cookies */
-#cookie-banner {
-    position: fixed;
-    top: -100px; /* Inicialmente fuera de la pantalla hacia arriba */
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    transition: top 0.5s; /* Agregamos una transición para suavizar el deslizamiento */
-}
-
-#accept-cookies {
-    background-color: #ff6600;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    margin-top: 5px;
-}
-
-/* Agregamos una clase para activar la animación de deslizamiento */
-.show-cookie-banner {
-    top: 0;
-}
-
