@@ -7,9 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
         cookieBanner.classList.remove("show-cookie-banner");
     });
 
+    // Mostrar el aviso de cookies con la animación de deslizamiento
     setTimeout(function () {
         cookieBanner.classList.add("show-cookie-banner");
-    }, 500);
+    }, 500); // Mostrar después de 500 ms (medio segundo)
 
     // Función para redireccionar a las subpáginas
     function navigateTo(page) {
