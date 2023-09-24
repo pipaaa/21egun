@@ -34,7 +34,7 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; /* Centramos el contenido al inicio */
     align-items: center;
 }
 
