@@ -8,22 +8,21 @@
 </head>
 <body>
     <!-- Aviso de Cookies -->
-    <div id="cookie-banner" class="hidden">
+    <div id="cookie-banner">
         <p>Aviso de cookies: Esta página web utiliza cookies. Al continuar navegando, aceptas nuestro uso de cookies.</p>
         <button id="accept-cookies">Aceptar</button>
     </div>
 
     <!-- Página Principal -->
     <div id="main-page">
-        <img id="logo" src="logo.jpg" alt="Logo 21 días">
         <div id="subpages">
-            <button class="subpage-button" onclick="navigateTo('subpage1.html')">Día 1</button>
-            <button class="subpage-button" onclick="navigateTo('subpage2.html')">Día 2</button>
-            <!-- Agrega los botones para los otros días de manera similar -->
+            <a class="subpage-button" href="subpage1.html">Día 1</a>
+            <a class="subpage-button" href="subpage2.html">Día 2</a>
+            <!-- Agrega los enlaces para los otros días de manera similar -->
         </div>
     </div>
 
-    <!-- JavaScript para mostrar el aviso de cookies con animación -->
+    <!-- JavaScript para ocultar el aviso de cookies -->
     <script src="script.js"></script>
 </body>
 </html>
