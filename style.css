@@ -38,7 +38,7 @@ body {
 
 #logo {
     width: 200px; /* Ajusta el tamaño de la imagen según tus preferencias */
-    animation: fadeIn 2s ease-in-out;
+    animation: fadeIn 2s ease-in-out; /* Agregamos la animación aquí */
 }
 
 #subpages {
