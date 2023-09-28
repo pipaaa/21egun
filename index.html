@@ -1,28 +1,52 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>21 días</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Intranet - Comunicados y Foro</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <!-- Aviso de Cookies -->
-    <div id="cookie-banner">
-        <p>Aviso de cookies: Esta página web utiliza cookies. Al continuar navegando, aceptas nuestro uso de cookies.</p>
-        <button id="accept-cookies">Aceptar</button>
-    </div>
-
-    <!-- Página Principal -->
-    <div id="main-page">
-        <div id="subpages">
-            <a class="subpage-button" href="subpage1.html">Día 1</a>
-            <a class="subpage-button" href="subpage2.html">Día 2</a>
-            <!-- Agrega los enlaces para los otros días de manera similar -->
-        </div>
-    </div>
-
-    <!-- JavaScript para ocultar el aviso de cookies -->
+    <header>
+        <h1>Intranet</h1>
+    </header>
+    <main>
+        <!-- Sección de Comunicados -->
+        <section id="comunicados">
+            <h2>Comunicados</h2>
+            <div class="comunicado">
+                <h3>Título del Comunicado 1</h3>
+                <p>Contenido del comunicado 1...</p>
+                <div class="comentarios">
+                    <!-- Sección de comentarios/discusiones -->
+                    <h4>Comentarios</h4>
+                    <ul id="comentarios1">
+                        <!-- Los comentarios se cargarán dinámicamente con JavaScript -->
+                    </ul>
+                    <!-- Formulario para agregar comentarios -->
+                    <form id="comentario-form1">
+                        <input type="text" id="nombre1" placeholder="Nombre">
+                        <textarea id="comentario1" placeholder="Escribe tu comentario"></textarea>
+                        <button type="submit">Publicar Comentario</button>
+                    </form>
+                </div>
+            </div>
+            <!-- Repetir la estructura para más comunicados -->
+        </section>
+        
+        <!-- Sección de Foro -->
+        <section id="foro">
+            <h2>Foro</h2>
+            <!-- Lista de hilos de discusión -->
+            <ul id="hilos">
+                <!-- Los hilos se cargarán dinámicamente con JavaScript -->
+            </ul>
+            <!-- Formulario para crear nuevos hilos -->
+            <form id="hilo-form">
+                <input type="text" id="titulo-hilo" placeholder="Título del Hilo">
+                <textarea id="contenido-hilo" placeholder="Escribe tu mensaje"></textarea>
+                <button type="submit">Crear Hilo</button>
+            </form>
+        </section>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
