@@ -42,3 +42,36 @@ document.getElementById("hilo-form").addEventListener("submit", function(event) 
     document.getElementById("titulo-hilo").value = "";
     document.getElementById("contenido-hilo").value = "";
 });
+// Código JavaScript para publicar comentarios en la sección de comunicados
+
+document.getElementById("comentario-form1").addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    // Obtener nombre y comentario desde el formulario
+    var nombre = document.getElementById("nombre1").value;
+    var comentario = document.getElementById("comentario1").value;
+
+    // Crear un objeto de comentario
+    var nuevoComentario = {
+        nombre: nombre,
+        comentario: comentario
+    };
+
+    // Enviar el comentario al servidor (ejemplo con AJAX)
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "servidor.php", true);
+    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            // Comentario publicado con éxito, ahora puedes agregarlo a la lista de comentarios
+            var comentarioItem = document.createElement("li");
+            comentarioItem.innerHTML = `<strong>${nombre}</strong>: ${comentario}`;
+            document.getElementById("comentarios1").appendChild(comentarioItem);
+
+            // Limpiar el formulario
+            document.getElementById("nombre1").value = "";
+            document.getElementById("comentario1").value = "";
+        }
+    };
+    xhr.send(JSON.stringify(nuevoComentario));
+});
